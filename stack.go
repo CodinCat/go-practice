@@ -2,6 +2,15 @@ package practice
 
 type Stack []int
 
+// Create a new stack with initial items
+func NewStack(items ...int) Stack {
+	var stack Stack
+	for _, item := range items {
+		stack.Push(item)
+	}
+	return stack
+}
+
 func (s *Stack) Push(v int) {
 	*s = append(*s, v)
 }
