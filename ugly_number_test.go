@@ -36,3 +36,11 @@ func TestIsUglyNumber(t *testing.T) {
 	assert.Equal(true, IsUglyNumber(25), "25")
 	assert.Equal(false, IsUglyNumber(26), "26")
 }
+
+func TestUglyNumbers(t *testing.T) {
+	assert := assert.New(t)
+	assert.Equal(
+		[]int{1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 16, 18},
+		UglyNumbers(13),
+	)
+}

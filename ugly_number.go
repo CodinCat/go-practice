@@ -12,3 +12,13 @@ func IsUglyNumber(n int) bool {
 	}
 	return n == 1
 }
+
+func UglyNumbers(length int) []int {
+	uglyNumbers := make([]int, 0, length)
+	for i := 1; len(uglyNumbers) != length; i++ {
+		if IsUglyNumber(i) {
+			uglyNumbers = append(uglyNumbers, i)
+		}
+	}
+	return uglyNumbers
+}
